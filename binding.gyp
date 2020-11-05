@@ -115,7 +115,7 @@
                   ],
                   'libraries': [
                     '-L<(javalibdir)',
-                    '-Wl,-rpath,<(javalibdir)',
+                    '-Wl,-rpath,@loader_path/jre/lib/jli',
                     '-ljli'
                   ],
                 },
