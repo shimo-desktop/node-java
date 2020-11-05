@@ -1,5 +1,5 @@
 {
-  "name": "java",
+  "name": "@shimo/node-java",
   "description": "Bridge API to connect with existing Java APIs.",
   "author": "Joe Ferner <joe@fernsroth.com>",
   "keywords": [
@@ -7,7 +7,7 @@
     "jvm",
     "bridge"
   ],
-  "version": "0.12.1",
+  "version": "0.13.0",
   "engines": {
     "node": ">=7.0.0"
   },
