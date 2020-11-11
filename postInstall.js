@@ -18,17 +18,16 @@ require('find-java-home')(function(err, home){
       so = getCorrectSoForPlatform(soFiles);
 
     binary = dll || dylib || so;
-
-    fs.writeFileSync(
-      path.resolve(__dirname, './build/jvm_dll_path.json'),
-      binary
-      ? JSON.stringify(
-          path.delimiter
-          + path.dirname(path.resolve(home, binary))
-        )
-      : '""'
-    );
   }
+  fs.writeFileSync(
+    path.resolve(__dirname, './build/jvm_dll_path.json'),
+    binary
+    ? JSON.stringify(
+        path.delimiter
+        + path.dirname(path.resolve(home, binary))
+      )
+    : '""'
+  );
 });
 
 function getCorrectSoForPlatform(soFiles){
