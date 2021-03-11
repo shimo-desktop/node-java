@@ -6,7 +6,7 @@
       ['target_arch=="ia32"', {
         'arch%': 'i386'
       }],
-      ['target_arch=="armv7l"', {
+      ['target_arch=="arm"', {
         'arch%': 'aarch32'
       }],
       ['target_arch=="arm64"', {
