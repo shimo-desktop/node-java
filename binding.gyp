@@ -6,6 +6,12 @@
       ['target_arch=="ia32"', {
         'arch%': 'i386'
       }],
+      ['target_arch=="armv7l"', {
+        'arch%': 'aarch32'
+      }],
+      ['target_arch=="arm64"', {
+        'arch%': 'aarch64'
+      }],
       ['OS!="win"', {
         'uname_m': '<!(uname -m)'
       }],
@@ -60,7 +66,7 @@
             ],
             'libraries': [
               '-L<(javalibdir)',
-              '-Wl,-rpath,<(javalibdir)',
+              '-Wl,-rpath,\'$$ORIGIN\'/jre/lib/<(arch)/server',
               '-ljvm'
             ]
           }
@@ -72,7 +78,7 @@
             ],
             'libraries': [
                '-L<(javalibdir)',
-              '-Wl,-rpath,<(javalibdir)',
+              '-Wl,-rpath,\'$$ORIGIN\'/jre/lib/<(arch)/server',
               '-ljvm'
             ]
           }
@@ -84,7 +90,7 @@
             ],
             'libraries': [
               '-L<(javalibdir)',
-              '-Wl,-rpath,<(javalibdir)',
+              '-Wl,-rpath,\'$$ORIGIN\'/jre/lib/<(arch)/server',
               '-ljvm'
             ]
           }
@@ -96,7 +102,7 @@
             ],
             'libraries': [
               '-L<(javalibdir)',
-              '-Wl,-rpath,<(javalibdir)',
+              '-Wl,-rpath,\'$$ORIGIN\'/jre/lib/<(arch)/server',
               '-ljvm'
             ]
           }
